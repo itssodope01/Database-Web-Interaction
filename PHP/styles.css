@@ -1,0 +1,146 @@
+/* pritam.cpp */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+.add-participant-button,
+.view-table-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#dynamic-table-container {
+    margin-top: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    padding: 5px;
+    margin: 0 5px;
+}
+
+/* Data Insert styles */
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff; cursor: pointer;
+}
+
+input[type="submit"]:hover { background-color: #45a049; }
+.error { color: red; }
+
+
+/* Participants.php */
+.remove-button{
+    background-color: #E34646;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.change-position-button {
+    background-color: #2882C0;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-button:hover
+{
+    background-color: #BA1C1C;
+}
+.change-position-button:hover {
+    background-color: #11579E;
+}
+
+/* create query */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ecf0f1;
+    color: #000000;
+}
+
+h1{
+    color: #093183;
+}
+h2 {
+    color: #25558d;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a6699;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980B9;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #D6EAF8;
+}
+
+td {
+    border: 1px solid #145789;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498DB;
+    color: white;
+}
+
+.change-grade-button {
+    display: inline-block;
+    margin-left: 10px;
+}
