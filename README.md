@@ -3,7 +3,7 @@ Interacting with database through web using PHP, JavaScript, CSS, HTML
 
 LocalHost. Start Page: Pritam.php
 
-Create the database to interact:
+Create the database to interact with:
 open mySQL in source folder: mySQL -u [username] -p
 > source Database_create.sql;
 > source insertdata.sql;
