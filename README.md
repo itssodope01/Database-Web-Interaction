@@ -11,4 +11,7 @@ open mySQL in source folder: mySQL -u [username] -p
 Creating Connection:
 Change [Database name] and [password] in db_connection.php
 open terminal in source folder.
-> php -S localhost:8000  
+> php -S localhost:8000
+
+Open Web Browser and go to:
+>http://localhost:8000/pritam.php
