@@ -29,6 +29,8 @@ CREATE TABLE users (
     username VARCHAR(60) NOT NULL UNIQUE,
     hashed_password VARCHAR(255) NOT NULL );
 
-Add new User with: hashpass.php (open terminal in the folder where hashpass.php is saved) 
+Add new User with: hashpass.php 
+first: change username and password for connection in hashpass.php and save it
+then, open terminal in the folder where hashpass.php is saved:
 >http://localhost:8000/hashpass.php
 The default user and password in hashpass.php: Username-Pritam Password-OpenSesame
