@@ -1,0 +1,314 @@
+/* pritam.cpp */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1000;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Updated CSS for dropdown menus with enhanced style */
+.modal select {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Remove default arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23212121' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden; /* Hide overflow to enable sliding animation */
+    transition: border-color 0.3s ease; /* Apply transition for border color */
+    font-size: 16px; /* Adjust font size */
+    font-family: Arial, sans-serif; /* Specify font family */
+    color: #333; /* Set text color */
+}
+
+/* Show dropdown menu on focus */
+.modal select:focus {
+    outline: none;
+    border-color: #3498DB; /* Highlight on focus */
+    max-height: 200px; /* Adjust to desired max-height for sliding animation */
+}
+
+/* Style for dropdown options */
+.modal select option {
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Style for dropdown arrow */
+.modal select::-ms-expand,
+.modal select::-webkit-expand {
+    display: none; /* Hide default arrow */
+}
+
+/* Custom dropdown arrow */
+.modal select {
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    -webkit-appearance: none; /* Remove default arrow in Webkit browsers */
+    appearance: none; /* Remove default arrow in other browsers */
+}
+
+
+
+.add-participant-button,
+/* Updated CSS for "View" buttons */
+.view-table-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 18px;
+}
+.add-participant-button button,
+.view-table-button button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    color: #ffffff;
+    border: 3px solid #406c8a; /* Thick border */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #082b40; /* Light background color */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.add-participant-button button:hover,
+.view-table-button button:hover {
+    background-color: #134668; /* Hover background color */
+    border-color: #1e6a99; /* Hover border color */
+}
+
+
+#dynamic-table-container {
+    margin-top: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #3498DB;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+    background-color: #2980B9;
+}
+
+/* Data Insert Styles */
+input[type="submit"] {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980B9;
+}
+
+.error {
+    color: red;
+}
+
+/* Participants.php Styles */
+.remove-button {
+    background-color: #E34646;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.change-position-button {
+    background-color: #2882C0;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #BA1C1C;
+}
+
+.change-position-button:hover {
+    background-color: #11579E;
+}
+
+/* create query */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ecf0f1;
+    color: #000000;
+}
+
+h1{
+    color: #093183;
+}
+h2 {
+    color: #25558d;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a6699;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980B9;
+}
+
+/* Updated CSS for compact tables */
+/* Updated CSS for variable width tables */
+table {
+    border-collapse: collapse;
+    width: auto; /* Set width to auto for variable width */
+    margin-top: 20px;
+    background-color: #D6EAF8;
+    border-radius: 8px; /* Adding border-radius for a more modern look */
+    overflow: hidden; /* Hide overflow to keep the background color consistent */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adding neon-colored shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for floating effect */
+    table-layout: auto; /* Set table layout to auto for variable width */
+    float: left; /* Float the tables to appear side by side */
+    margin-right: 20px; /* Add some space between tables */
+    margin-bottom: 20px; /* Add some space below tables */
+    clear: none; /* Allow content to flow around tables */
+}
+
+
+td,
+th {
+    padding: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+th {
+    background-color: #16415e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #D0E8F4; /* Alternate row color */
+}
+tr:nth-child(odd) {
+    background-color: #a4c8dd; /* Alternate row color */
+}
+
+tr:hover {
+    background-color: #7FB3D5; /* Hover effect */
+}
+
+/* Interactive hover effect */
+
+
+/* Floating effect */
+table:hover {
+    transform: translateY(-5px); /* Move the table up slightly on hover */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2), 0 0 40px rgba(64, 68, 68, 0.5); /* Neon-colored shadow on hover */
+}
+
+
+.change-grade-button {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Updated CSS for toggle button */
+
+
+.toggle-button {
+    padding: 8px 16px;
+    background-color: #09293e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #154260;
+}
+
+
+/* Split layout CSS */
+.left-container {
+    float: left;
+    width: 55.75%; /* Adjust width as needed */
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+
+.right-container {
+    float: left;
+    width: 35%; /* Adjust width as needed */
+    box-sizing: border-box;
+}
+
+/* Ensure the containers don't overlap in smaller screens */
+@media only screen and (max-width: 768px) {
+    .left-container, .right-container {
+        width: 100%;
+    }
+}
