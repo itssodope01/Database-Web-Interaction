@@ -21,7 +21,7 @@ do not save hashpass.php into main project folder.
 Open Web Browser and go to:
 >http://localhost:8000/pritam.php  (Log In required -see below)
 
-!impoertant (before running hashpass.php script)
+!important (before running hashpass.php script)
 Add to existing Database table for users and Passwords:
 >use database_a;
 CREATE TABLE users (
