@@ -18,7 +18,7 @@ open terminal in source folder(where you saved the PHP files).
 > php -S localhost:8000
 
 Open Web Browser and go to:
->http://localhost:8000/pritam.php
+>http://localhost:8000/pritam.php  (Log In required -see below)
 
 
 Add to existing Database table for users and Passwords:
