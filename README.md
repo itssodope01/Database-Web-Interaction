@@ -14,7 +14,7 @@ open mySQL in source folder(where you stored the .sql files): mySQL -u [username
 
 Creating Connection:
 Change [Database name] and [password] in db_connection.php (Database name:database_a)
-open terminal in source folder(where you saved the PHP files).
+open terminal in source folder(where you saved the PHP files // save it as it is structured here, each file in its proper file path).
 > php -S localhost:8000
 
 Open Web Browser and go to:
