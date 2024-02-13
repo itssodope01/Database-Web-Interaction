@@ -14,13 +14,14 @@ open mySQL in source folder(where you stored the .sql files): mySQL -u [username
 
 Creating Connection:
 Change [Database name] and [password] in db_connection.php (Database name:database_a)
-open terminal in source folder(where you saved the PHP files // save it as it is structured here, each file in its proper file path).
+open terminal in source folder(where you saved the PHP files (the main PHP project folder) // save it as it is structured here, each file in its proper file path).
+do not save hashpass.php into main project folder.
 > php -S localhost:8000
 
 Open Web Browser and go to:
 >http://localhost:8000/pritam.php  (Log In required -see below)
 
-
+!impoertant (before running hashpass.php script)
 Add to existing Database table for users and Passwords:
 >use database_a;
 CREATE TABLE users (
@@ -28,4 +29,6 @@ CREATE TABLE users (
     username VARCHAR(60) NOT NULL UNIQUE,
     hashed_password VARCHAR(255) NOT NULL );
 
-Add new User with: hashpass.php
+Add new User with: hashpass.php (open terminal in the folder where hashpass.php is saved) 
+>http://localhost:8000/hashpass.php
+The default user and password in hashpass.php: Username-Pritam Password-OpenSesame
