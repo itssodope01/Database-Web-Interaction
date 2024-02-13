@@ -13,14 +13,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Username and password to be inserted
-$username = "Prakash";
-$password = "Prakash2004*";
+//Username and password for the new user
+$username = "Pritam";
+$password = "OpenSesame";
 
-// Hash the password
+//Hashing the password
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-// SQL statement to insert into the users table
+//SQL statement to insert into the users table
 $sql = "INSERT INTO users (username, hashed_password) VALUES ('$username', '$hashed_password')";
 
 if ($conn->query($sql) === TRUE) {
