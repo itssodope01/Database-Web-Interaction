@@ -1,6 +1,6 @@
 # Database-Web-Interaction
 Interacting with database through web using PHP, JavaScript, CSS, HTML
-
+Deployed: https://pritamspaceviking.000webhostapp.com/pritam.php
 Installion needed: mySQL(oracle website), VSCODE, PHP(from official PHP website)
 Add mySQL,PHP to your system's PATH variable for easier command-line access.
 
