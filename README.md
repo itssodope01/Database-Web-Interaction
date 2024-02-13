@@ -25,7 +25,7 @@ Add to existing Database table for users and Passwords:
 >use database_a;
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL UNIQUE,
+    username VARCHAR(60) NOT NULL UNIQUE,
     hashed_password VARCHAR(255) NOT NULL );
 
 Add new User with: hashpass.php
