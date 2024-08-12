@@ -1,40 +1,86 @@
 # Database-Web-Interaction
-Interacting with database through web using PHP, JavaScript, CSS, HTML
 
-Deployed: https://pritamspaceviking.000webhostapp.com/pritam.php
+This project demonstrates interaction with a database through a web interface using PHP, JavaScript, CSS, and HTML.
 
+## Deployment
 
-For localhost:
-Installion needed: mySQL(oracle website), VSCODE, PHP(from official PHP website)
-Add mySQL,PHP to your system's PATH variable for easier command-line access.
+The project is deployed at: https://pritamspaceviking.000webhostapp.com/pritam.php
 
-LocalHost. Login Page: Index.php
-          Main Page:Pritam.php
+## Local Setup
 
-Create the database to interact with:
-open mySQL in source folder(where you stored the .sql files): mySQL -u [username] -p (default username is generally 'root')
-> source Database_create.sql;
-> source insertdata.sql;
+### Prerequisites
 
-Creating Connection:
-Change [Database name] and [password] in db_connection.php (Database name:database_a)
-open terminal in source folder(where you saved the PHP files (the main PHP project folder) // save it as it is structured here, each file in its proper file path).
-do not save hashpass.php into main project folder.
-> php -S localhost:8000
+- MySQL (download from Oracle website)
+- VSCode
+- PHP (download from official PHP website)
 
-Open Web Browser and go to:
->http://localhost:8000/pritam.php  (Log In required -see below)
+### Installation
 
-!important (before running hashpass.php script)
-Add to existing Database a table for users and Passwords:
->use database_a;
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(60) NOT NULL UNIQUE,
-    hashed_password VARCHAR(255) NOT NULL );
+1. Install MySQL and PHP.
+2. Add MySQL and PHP to your system's PATH variable for easier command-line access.
 
-Add new User with: hashpass.php 
- First: change username and password for connection in hashpass.php and save it.
-Then, open terminal in the folder where hashpass.php is saved:
->http://localhost:8000/hashpass.php
-The default user and password in hashpass.php: Username-Pritam Password-OpenSesame
+### Database Setup
+
+1. Open MySQL in the source folder (where you stored the .sql files):
+   ```
+   mysql -u [username] -p
+   ```
+   (The default username is generally 'root')
+
+2. Create and populate the database:
+   ```sql
+   source Database_create.sql;
+   source insertdata.sql;
+   ```
+
+3. Create a table for users and passwords:
+   ```sql
+   USE database_a;
+   CREATE TABLE users (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       username VARCHAR(60) NOT NULL UNIQUE,
+       hashed_password VARCHAR(255) NOT NULL
+   );
+   ```
+
+### Configuration
+
+1. Update `db_connection.php` with your database name and password (Database name: database_a).
+
+### Running the Application
+
+1. Open a terminal in the main PHP project folder.
+2. Start the PHP development server:
+   ```
+   php -S localhost:8000
+   ```
+3. Open a web browser and go to:
+   - http://localhost:8000/index.php (Login Page)
+   - http://localhost:8000/pritam.php (Main Page, requires login)
+
+### Adding Users
+
+1. Modify `hashpass.php` with your desired username and password.
+2. Run the script:
+   ```
+   php hashpass.php
+   ```
+   Default credentials: Username: Pritam, Password: OpenSesame
+
+## File Structure
+
+Ensure all files are saved in their proper locations within the project folder. Do not save `hashpass.php` in the main project folder.
+
+## Notes
+
+- The login page is `index.php`
+- The main page is `pritam.php`
+- Always use secure practices when handling passwords and sensitive data.
+
+## Contributing
+
+Feel free to fork this project and submit pull requests for any improvements or bug fixes.
+
+## License
+
+[Add your chosen license here]
