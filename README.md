@@ -2,10 +2,6 @@
 
 This project demonstrates interaction with a database through a web interface using PHP, JavaScript, CSS, and HTML.
 
-## Deployment
-
-The project is deployed at: https://pritamspaceviking.000webhostapp.com/pritam.php
-
 ## Local Setup
 
 ### Prerequisites
@@ -22,12 +18,15 @@ The project is deployed at: https://pritamspaceviking.000webhostapp.com/pritam.p
 ### Database Setup
 
 1. Open MySQL in the source folder (where you stored the .sql files):
+
    ```
    mysql -u [username] -p
    ```
+
    (The default username is generally 'root')
 
 2. Create and populate the database:
+
    ```sql
    source Database_create.sql;
    source insertdata.sql;
@@ -83,4 +82,4 @@ Feel free to fork this project and submit pull requests for any improvements or 
 
 ## License
 
-[Add your chosen license here]
+MIT License
